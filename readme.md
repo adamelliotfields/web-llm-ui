@@ -1,6 +1,6 @@
 # chat
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/adamelliotfields/chat?devcontainer_path=.devcontainer/devcontainer.json&machine=basicLinux32gb) [![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://github.com/adamelliotfields/react-template/blob/8aea7029c0ed095a606bcbd589d36b20cf8dd85a/readme.md)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/adamelliotfields/chat?devcontainer_path=.devcontainer/devcontainer.json&machine=basicLinux32gb) [![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://github.com/adamelliotfields/chat/blob/64d0e33bd876a8d8372cd7d940d880638e478893/readme.md)
 
 > [!IMPORTANT]  
 > No longer maintained. :cry: When I first made this, there was no UI for WebLLM. The official app at [chat.webllm.ai](https://chat.webllm.ai) is now the best UI for WebLLM and is actively maintained. Use that or one of Xenova's WebGPU [spaces](https://huggingface.co/collections/Xenova/transformersjs-demos-64f9c4f49c099d93dbc611df) instead! :llama:
