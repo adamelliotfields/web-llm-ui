@@ -28,7 +28,7 @@ export const Header = memo(function Header({ className, ...rest }: HeaderProps) 
           </a>
           <Button
             className="text-xl"
-            href="https://github.com/adamelliotfields/chat"
+            href="https://github.com/adamelliotfields/web-llm-ui"
             icon={Github}
             label="GitHub"
           />

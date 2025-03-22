@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/typescript-node:20
+FROM mcr.microsoft.com/devcontainers/typescript-node:22
 
 # add bun bin to path
 ENV PATH "/home/node/.bun/bin:${PATH}"
@@ -7,10 +7,10 @@ ENV PATH "/home/node/.bun/bin:${PATH}"
 USER 1000:1000
 
 # workdir
-WORKDIR /workspaces/chat
+WORKDIR /workspaces/web-llm-ui
 
 # install bun
 RUN curl -fsSL https://bun.sh/install | bash
 
 # ports
-EXPOSE 5173
+EXPOSE 4173 5173

@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "chat",
+  "name": "web-llm-ui",
   "version": "0.1.5",
   "type": "module",
   "scripts": {

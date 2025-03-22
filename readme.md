@@ -1,43 +1,27 @@
-# chat
+# web-llm-ui
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/adamelliotfields/chat?devcontainer_path=.devcontainer/devcontainer.json&machine=basicLinux32gb)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/adamelliotfields/web-llm-ui?devcontainer_path=.devcontainer/devcontainer.json&machine=basicLinux32gb)
 
-> [!IMPORTANT]  
-> No longer maintained. :cry: When I first made this, there was no UI for WebLLM. The official app at [chat.webllm.ai](https://chat.webllm.ai) is now the best UI for WebLLM and is actively maintained. Use that or one of Xenova's WebGPU [spaces](https://huggingface.co/collections/Xenova/transformersjs-demos-64f9c4f49c099d93dbc611df) instead! :llama:
+https://github.com/adamelliotfields/web-llm-ui/assets/7433025/07565763-606b-4de3-aa2d-8d5a26c83941
 
-React chat UI for [Web LLM](https://webllm.mlc.ai) on GitHub Pages. Built with Tailwind and Jotai. Inspired by [Perplexity Labs](https://labs.perplexity.ai).
+A React app I made to experiment with [quantized](https://huggingface.co/docs/transformers/en/quantization/overview) models in the browser using [WebGPU](https://webgpu.org). The models are compiled to WebAssembly using [MLC](https://github.com/mlc-ai/mlc-llm), which is like [llama.cpp](https://github.com/ggml-org/llama.cpp) for the web.
 
-https://github.com/adamelliotfields/chat/assets/7433025/07565763-606b-4de3-aa2d-8d5a26c83941
-
-## Introduction
-
-[Web LLM](https://github.com/mlc-ai/web-llm) is a project under the [MLC](https://mlc.ai) (machine learning compilation) organization. It allows you to run large language models in the browser using WebGPU and WebAssembly. Check out the [example](https://github.com/mlc-ai/web-llm/tree/main/examples/simple-chat) and read the [introduction](https://mlc.ai/chapter_introduction/index.html) to learn more.
-
-In addition to [`@mlc-ai/web-llm`](https://www.npmjs.com/package/@mlc-ai/web-llm), the app uses TypeScript, React, Jotai, and Tailwind. It's built with Vite and SWC.
+I'm not going to update this, but the official app at [chat.webllm.ai](https://chat.webllm.ai) is actively maintained. Use that or one of [xenova](https://huggingface.co/Xenova)'s WebGPU [spaces](https://huggingface.co/collections/Xenova/transformersjs-demos-64f9c4f49c099d93dbc611df) instead.
 
 ## Usage
 
 ```sh
-# localhost:5173
-npm install
-npm start
+bun install
+bun start
 ```
 
 ## Known issues
 
-I'm currently using Windows/Edge stable on a Lenovo laptop with a RTX 2080 6GB.
-
-Using the demo app at [webllm.mlc.ai](https://webllm.mlc.ai), I did not have to enable any flags to get the `q4f32` quantized models to work (`f16` requires a flag). Go to [webgpureport.org](https://webgpureport.org) to inspect your system's WebGPU capabilities.
-
-### Fetch errors
-
-For whatever reason, I have to be behind a VPN to fetch the models from Hugging Face on Windows. 🤷‍♂️
+Using `q4f32` quantized models, as `q4f16` requires a flag. See [webgpureport.org](https://webgpureport.org).
 
 ### Cannot find global function
 
-Usually a cache issue.
-
-You can delete an individual cache:
+If you see this message, it is a cache issue. You can delete an individual cache with:
 
 ```js
 await caches.delete('webllm/wasm')
@@ -127,13 +111,3 @@ const inCache = hasModelInCache('Phi2-q4f32_1', config) // throws if model ID is
 ## VRAM requirements
 
 See [utils/vram_requirements](https://github.com/mlc-ai/web-llm/tree/main/utils/vram_requirements) in the Web LLM repo.
-
-## TODO
-
-- [ ] Dark mode
-- [ ] Settings menu (temperature, system message, etc.)
-- [ ] Inference on web worker
-- [ ] Offline/PWA
-- [ ] Cache management
-- [ ] Image upload for multimodal like [LLaVA](https://llava-vl.github.io)
-- [ ] Tailwind class sorting by Biome 🤞

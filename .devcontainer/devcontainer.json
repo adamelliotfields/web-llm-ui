@@ -2,7 +2,7 @@
   "build": { "dockerfile": "Dockerfile" },
   "postCreateCommand": "bun install --frozen-lockfile",
   "waitFor": "postCreateCommand",
-  "forwardPorts": [5173],
+  "forwardPorts": [4173, 5173],
   "containerEnv": {
     "GH_TOKEN": "${localEnv:GH_TOKEN}"
   }

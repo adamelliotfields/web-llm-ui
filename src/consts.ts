@@ -1,5 +1,3 @@
-export const TITLE = 'CHAT' as const
+export const TITLE = 'WEB LLM UI' as const
 
-export const HREF = import.meta.env.DEV
-  ? 'http://localhost:5173'
-  : 'https://aef.me/chat/'
+export const HREF = 'http://localhost:5173' as const
